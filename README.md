@@ -2,6 +2,8 @@
 
 Simple 2h project prototype created for friend's research.
 
+View page in action on [https://siwykrzysiek.github.io/kwestionariusz-rol-zespolowych/](https://siwykrzysiek.github.io/kwestionariusz-rol-zespolowych/)
+
 ## Project setup
 
 ```
