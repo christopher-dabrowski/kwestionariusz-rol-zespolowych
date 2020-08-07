@@ -21,18 +21,46 @@
           v-model="a"
           :max="left"
         />
-
         <Option
           letter="B"
           text="Mogę dobrze pracować z różnymi ludźmi"
           v-model="b"
           :max="left"
         />
-
         <Option
           letter="C"
           text='"Produkowanie" pomysłów to moja naturalna zdolność'
           v-model="c"
+          :max="left"
+        />
+        <Option
+          letter="D"
+          text='Moja siła twi w tym, że potrafię z ludzi "wyciągnąć" to, co mają w sobie najlepszego, aby przyczynili się do osiągnięcia celów i zadań grupowych'
+          v-model="d"
+          :max="left"
+        />
+        <Option
+          letter="E"
+          text="Moja główna umięjętność polega na doprowadzaniu spraw do końca i wiąże się z efektywnością"
+          v-model="e"
+          :max="left"
+        />
+        <Option
+          letter="F"
+          text="Jestem w stanie przez jakiś czas zaakceptować niepopularność mojej osoby, jeśli prowadzi to do wartościowych wyników"
+          v-model="f"
+          :max="left"
+        />
+        <Option
+          letter="G"
+          text="Zwykle wyczuwam, co jest realistyczne i prawdopodobne, jeśli chodzi o osiągnięcie sukcesu"
+          v-model="g"
+          :max="left"
+        />
+        <Option
+          letter="H"
+          text="Zwykle mogę zaproponować jakieś alternatywne wyjście bez uprzedzeń i niechęci"
+          v-model="h"
           :max="left"
         />
       </form>
@@ -94,5 +122,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  margin-bottom: 80px;
 }
 </style>

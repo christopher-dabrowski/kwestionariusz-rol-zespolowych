@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <label
+  <div class="mb-4">
+    <label class="mb-0"
       ><b>{{ letter }}</b> {{ text }}</label
     >
     <div class="d-flex align-items-baseline">
