@@ -13,6 +13,7 @@
         <p>
           Do przydziału: <b>{{ left }}</b> punktów
         </p>
+        <b-button class="mb-2" variant="primary" @click="reset">Reset</b-button>
 
         <Option
           letter="A"
@@ -109,6 +110,18 @@ export default {
     left() {
       console.log("Zostało: " + (this.total - this.spend));
       return this.total - this.spend;
+    },
+  },
+  methods: {
+    reset() {
+      this.a = 0;
+      this.b = 0;
+      this.c = 0;
+      this.d = 0;
+      this.e = 0;
+      this.f = 0;
+      this.g = 0;
+      this.h = 0;
     },
   },
 };
