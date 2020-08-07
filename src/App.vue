@@ -10,49 +10,44 @@
       <form style="text-align: left">
         <h2>Cześć I</h2>
         <h4>Sądzę, że osobiście wnoszę do grupy...</h4>
+        <p>
+          Do przydziału: <b>{{ left }}</b> punktów
+        </p>
 
-        <div>
-          <label
-            ><b>A</b> Wydaje mi się, że szybko dostrzegam i umiem wykorzystać
-            nowe możliwości</label
-          >
-          <div class="d-flex align-items-baseline">
-            <b-form-input
-              class="mr-3"
-              v-model="a"
-              type="range"
-              min="0"
-              :max="left"
-            ></b-form-input>
-            <div class="mt-2">
-              <b>{{ a }}</b>
-            </div>
-          </div>
-        </div>
+        <Option
+          letter="A"
+          text="Wydaje mi się, że szybko dostrzegam i umiem wykorzystać
+            nowe możliwości"
+          v-model="a"
+          :max="left"
+        />
 
-        <div>
-          <label><b>B</b> Mogę dobrze pracować z różnymi ludźmi</label>
-          <div class="d-flex align-items-baseline">
-            <b-form-input
-              class="mr-3"
-              v-model="b"
-              type="range"
-              min="0"
-              :max="left"
-            ></b-form-input>
-            <div class="mt-2">
-              <b>{{ b }}</b>
-            </div>
-          </div>
-        </div>
+        <Option
+          letter="B"
+          text="Mogę dobrze pracować z różnymi ludźmi"
+          v-model="b"
+          :max="left"
+        />
+
+        <Option
+          letter="C"
+          text='"Produkowanie" pomysłów to moja naturalna zdolność'
+          v-model="c"
+          :max="left"
+        />
       </form>
     </b-card>
   </div>
 </template>
 
 <script>
+import Option from "./components/Option";
+
 export default {
   name: "App",
+  components: {
+    Option,
+  },
   data() {
     return {
       total: 10,
@@ -79,9 +74,12 @@ export default {
         this.h,
       ];
 
-      return values.map(Number).reduce((a, b) => a + b, 0);
+      const x = values.map(Number).reduce((a, b) => a + b, 0);
+      console.log("Wydano: " + x);
+      return x;
     },
     left() {
+      console.log("Zostało: " + (this.total - this.spend));
       return this.total - this.spend;
     },
   },
