@@ -5,11 +5,12 @@
     >
     <div class="d-flex align-items-baseline">
       <b-form-input
+        :id="'input' + letter"
         class="mr-3"
         :value="value"
         type="range"
         min="0"
-        :max="left"
+        :max="max"
         @input="updateValue"
       ></b-form-input>
       <div class="mt-2">
@@ -26,15 +27,27 @@ export default {
     text: String,
     max: Number,
     value: Number,
-  },
-  computed: {
-    left() {
-      return Number(this.max) + Number(this.value);
-    },
+    left: Number,
   },
   methods: {
     updateValue(newValue) {
-      this.$emit("input", Number(newValue));
+      newValue = Number(newValue);
+      console.log(newValue);
+      if (this.left > 0 || newValue < this.value) {
+        newValue =
+          newValue <= this.value + this.left
+            ? newValue
+            : this.value + this.left;
+        this.$emit("input", newValue);
+      } else {
+        // FIXME: What an ugly workaroud :p
+        const oldValue = this.value;
+        this.$nextTick(() => {
+          this.$emit("input", oldValue);
+          const input = document.getElementById("input" + this.letter);
+          input.value = oldValue;
+        });
+      }
     },
   },
 };
