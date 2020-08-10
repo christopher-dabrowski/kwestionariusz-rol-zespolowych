@@ -8,7 +8,7 @@
       style="max-width: 1000px; margin: auto"
     >
       <form style="text-align: left">
-        <h2>Cześć I</h2>
+        <h2>Część I</h2>
         <h4>Sądzę, że osobiście wnoszę do grupy...</h4>
         <p>
           Do przydziału: <b>{{ left }}</b> punktów
