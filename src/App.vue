@@ -4,7 +4,7 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
     <b-card
       title="Kwestionariusz ról zespołowych"
-      sub-title="Super fajna ankieta"
+      sub-title="Na użytek pracy licencjackiej"
       style="max-width: 1000px; margin: auto"
     >
       <form style="text-align: left">
