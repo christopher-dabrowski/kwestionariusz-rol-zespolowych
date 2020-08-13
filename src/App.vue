@@ -78,8 +78,14 @@
       subtitle = "Sądzę, że osobiście wnoszę do grupy..."
       :points = "10"
       :questions = "questions"
-      >
-      </Section>
+      />
+      <hr/>
+      <Section
+      title = "Część II"
+      subtitle = "Lorem ipsum"
+      :points = "10"
+      :questions = "questions"
+      />
     </b-card>
   </div>
 </template>
