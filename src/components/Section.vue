@@ -1,23 +1,12 @@
 <template>
   <form style="text-align: left">
-    <!-- TODO: Clean everything -->
-    <h2>Część I</h2>
-    <h4>Sądzę, że osobiście wnoszę do grupy...</h4>
+    <h2>{{title}}</h2>
+    <h4>{{subtitle}}</h4>
     <p>
       Do przydziału: 
       <b>{{ remaining }}</b> punktów
     </p>
     <b-button class="mb-2" variant="primary" @click="reset">Reset</b-button>
-
-    <!-- TODO: Generate options -->
-    <!-- <Option
-      letter="A"
-      text="Wydaje mi się, że szybko dostrzegam i umiem wykorzystać
-            nowe możliwości"
-      v-model="a"
-      :max="10"
-      :left="left"
-    /> -->
    
     <Option v-for="(question, index) in questions"
     :key="index"
