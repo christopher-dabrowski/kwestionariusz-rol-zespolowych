@@ -4,8 +4,8 @@
     <h2>Część I</h2>
     <h4>Sądzę, że osobiście wnoszę do grupy...</h4>
     <p>
-      Do przydziału:
-      <b>{{ left }}</b> punktów
+      Do przydziału: 
+      <b>{{ remaining }}</b> punktów
     </p>
     <b-button class="mb-2" variant="primary" @click="reset">Reset</b-button>
 
@@ -24,7 +24,8 @@
     :letter="letters[index]"
     :text='question'
     :max="10"
-    :left="10"
+    :left="remaining"
+    v-model="values[index]"
     ></Option>
   </form>
 </template>
@@ -32,6 +33,12 @@
 <script>
 import Option from './Option';
 export default {
+  methods: {
+    reset() {
+      const values = new Array(this.questions.length).fill(0);
+      this.values = values;
+    }
+  },
   components: {
     Option
   },
@@ -48,6 +55,10 @@ export default {
     };
   },
   computed: {
+    remaining() {
+      const spent =  this.values.reduce((v, x) => v + x, 0);
+      return this.points - spent;
+    },
     letters() {
       // TODO: Implement me
       const answers = [];
