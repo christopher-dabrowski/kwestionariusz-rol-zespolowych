@@ -7,7 +7,7 @@
       sub-title="Na użytek pracy licencjackiej"
       style="max-width: 1000px; margin: auto"
     >
-      <form style="text-align: left">
+      <!-- <form style="text-align: left">
         <h2>Część I</h2>
         <h4>Sądzę, że osobiście wnoszę do grupy...</h4>
         <p>
@@ -72,18 +72,27 @@
           :max="10"
           :left="left"
         />
-      </form>
+      </form> -->
+      <Section
+      title = "Część I"
+      subtitle = "Sądzę, że osobiście wnoszę do grupy..."
+      :points = "10"
+      :questions = "questions"
+      >
+      </Section>
     </b-card>
   </div>
 </template>
 
 <script>
-import Option from "./components/Option";
+import Section from "./components/Section";
+// import Option from "./components/Option";
 
 export default {
   name: "App",
   components: {
-    Option,
+    Section,
+    // Option,
   },
   data() {
     return {
@@ -96,6 +105,7 @@ export default {
       f: 0,
       g: 0,
       h: 0,
+      questions: ['Wydaje mi się, że szybko dostrzegam i umiem wykorzystać nowe możliwości', 'Mogę dobrze pracować z różnymi ludźmi', '"Produkowanie" pomysłów to moja naturalna zdolność'], 
     };
   },
   computed: {

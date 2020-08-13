@@ -21,8 +21,8 @@
    
     <Option v-for="(question, index) in questions"
     :key="index"
-    letter="A"
-    text='question'
+    :letter="letters[index]"
+    :text='question'
     :max="10"
     :left="10"
     ></Option>
