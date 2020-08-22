@@ -49,7 +49,6 @@ export default {
       return this.points - spent;
     },
     letters() {
-      // TODO: Implement me
       const answers = [];
       for (let i = 0; i < this.questions.length; i++) {
         const letterCode = 'A'.charCodeAt(0) + i;
