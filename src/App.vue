@@ -2,6 +2,9 @@
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+    <b-button class="mb-3" variant="info" @click="addRandomStuffToFB"
+      >Add random stuff!</b-button
+    >
     <b-card
       title="Kwestionariusz ról zespołowych"
       sub-title="Na użytek pracy licencjackiej"
@@ -36,12 +39,12 @@
 <script>
 import Section from "./components/Section";
 import sections from "./sectionsData";
-// import Option from "./components/Option";
+import { questionnairesCollections } from "./firebase";
 
 export default {
   name: "App",
   components: {
-    Section
+    Section,
     // Option,
   },
   data() {
@@ -102,7 +105,22 @@ export default {
     //   this.g = 0;
     //   this.h = 0;
     // },
-  }
+    addRandomStuffToFB() {
+      // TODO: Remove me!
+
+      questionnairesCollections
+        .add({
+          name: "John",
+          points: 10,
+        })
+        .then((id) => {
+          console.log(id);
+        })
+        .catch((e) => {
+          console.error(e);
+        });
+    },
+  },
 };
 </script>
 
