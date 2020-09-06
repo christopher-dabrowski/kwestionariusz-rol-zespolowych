@@ -11,12 +11,7 @@
       style="max-width: 1000px; margin: auto"
     >
       <div v-for="(section, index) in sections" :key="index">
-        <Section
-          :title="section.title"
-          :subtitle="section.subtitle"
-          :points="section.points"
-          :questions="section.questions"
-        />
+        <Section :section="section" />
         <hr v-if="sections.length - 1 != index" />
       </div>
     </b-card>
@@ -25,7 +20,7 @@
 
 <script>
 import Section from "./components/Section";
-import sections from "./sectionsData";
+import sectionsData from "./sectionsData";
 import { questionnairesCollections } from "./firebase";
 
 export default {
@@ -35,6 +30,12 @@ export default {
     // Option,
   },
   data() {
+    const sections = [];
+    for (const section of sectionsData) {
+      section.values = new Array(section.questions.length).fill(0);
+      sections.push(section);
+    }
+
     return {
       sections: sections,
     };

@@ -12,7 +12,7 @@
         min="0"
         :max="max"
         @input="updateValue"
-      >
+      />
       <div class="mt-2">
         <b>{{ value }}</b>
       </div>
@@ -38,11 +38,11 @@ export default {
           newValue <= this.value + this.left
             ? newValue
             : this.value + this.left;
-        this.$emit("input", newValue);
+        this.$emit("change", newValue);
       } else {
         const oldValue = this.value;
         this.$nextTick(() => {
-          this.$emit("input", oldValue);
+          // this.$emit("change", oldValue); // TODO: Try to remove
           this.$refs.input.value = oldValue;
         });
       }

@@ -34,7 +34,7 @@ const sections = [
         title: "Część VI",
         subtitle: "Jeśli nagle otrzymuję trudne zadanie do wykonania w ograniczonym czasie i wobec nieznanych mi osób...",
         points: 10,
-        questions: ['Mam ochotę zaszyć się w kącie, aby wymyślić sposób na wyjście z impasu', 'Byłbym gotów do współpracy z osobą, która wykazała najbardziej pozytywne nastawienie', 'Znalazłbym sposób na zmniejszenie skali zadania prze ustalenie, co mogłyby zrobić poszczególne jednostk', 'Moje naturalne wyczucie spraw pilnych pozwoli na postępowanie zgodnie z planem', 'Z pewnością zachowam spokój i zdolność do trzeźwego osądu', 'Mimo nacisków zachowam stałość celu','Byłbym przygotowany do przejęcia konstruktywnego kierownictwa, jeśli stwierdziłbym, że grupa nie robi postępu', 'Zainicjowałbym dyskusję w celu stymulowania nowych pomysłów, rozwiązań'],
+        questions: ['Mam ochotę zaszyć się w kącie, aby wymyślić sposób na wyjście z impasu', 'Byłbym gotów do współpracy z osobą, która wykazała najbardziej pozytywne nastawienie', 'Znalazłbym sposób na zmniejszenie skali zadania prze ustalenie, co mogłyby zrobić poszczególne jednostk', 'Moje naturalne wyczucie spraw pilnych pozwoli na postępowanie zgodnie z planem', 'Z pewnością zachowam spokój i zdolność do trzeźwego osądu', 'Mimo nacisków zachowam stałość celu', 'Byłbym przygotowany do przejęcia konstruktywnego kierownictwa, jeśli stwierdziłbym, że grupa nie robi postępu', 'Zainicjowałbym dyskusję w celu stymulowania nowych pomysłów, rozwiązań'],
     },
     {
         title: "Część VII",
