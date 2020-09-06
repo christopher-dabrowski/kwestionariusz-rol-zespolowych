@@ -74,9 +74,11 @@ export default {
       try {
         await questionnairesCollections.add({
           data: this.sections,
+          date: new Date(),
         });
+        this.$bvModal.msgBoxOk("Kwestionariusz został zapisany");
       } catch (error) {
-        console.log(error);
+        this.$bvModal.msgBoxOk(`Wystąpił błąd: ${error}`);
       }
     },
   },
