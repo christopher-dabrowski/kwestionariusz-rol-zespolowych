@@ -26,36 +26,22 @@ import Option from "./Option";
 export default {
   methods: {
     reset() {
-      // TODO: Use event
-      // const values = new Array(this.section.questions.length).fill(0);
-      // this.values = values;
+      this.$emit("reset");
     },
     handleInputChange(i, data) {
       this.$emit("valueChange", { i, data });
-      // const tmp = this.values.slice();
-      // tmp[i] = data;
-      // this.values = tmp;
     },
   },
   components: {
     Option,
   },
   props: {
-    // section: Object,
     title: String,
     subtitle: String,
     points: Number,
     questions: Array,
     values: Array,
   },
-  // data() {
-  //   return {
-  //     title: this.section.title,
-  //     subtitle: this.section.subtitle,
-  //     points: this.section.points,
-  //     questions: this.section.questions,
-  //   };
-  // },
   computed: {
     remaining() {
       const spent = this.values.reduce((v, x) => v + x, 0);

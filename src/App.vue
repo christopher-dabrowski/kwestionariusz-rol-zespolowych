@@ -16,6 +16,7 @@
           :questions="section.questions"
           :values="section.values"
           @valueChange="handleSectionValueChange(index, $event)"
+          @reset="handleSectionReset(index)"
         />
         <hr v-if="sections.length - 1 != index" />
       </div>
@@ -53,6 +54,16 @@ export default {
           : {
               ...s,
               values: s.values.map((v, vi) => (vi !== i ? v : data)),
+            }
+      );
+    },
+    handleSectionReset(sectionNumber) {
+      this.sections = this.sections.map((s, si) =>
+        si !== sectionNumber
+          ? s
+          : {
+              ...s,
+              values: s.values.map(() => 0),
             }
       );
     },
