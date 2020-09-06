@@ -26,13 +26,15 @@ import Option from "./Option";
 export default {
   methods: {
     reset() {
-      const values = new Array(this.section.questions.length).fill(0);
-      this.values = values;
+      // TODO: Use event
+      // const values = new Array(this.section.questions.length).fill(0);
+      // this.values = values;
     },
     handleInputChange(i, data) {
-      const tmp = this.values.slice();
-      tmp[i] = data;
-      this.values = tmp;
+      this.$emit("valueChange", { i, data });
+      // const tmp = this.values.slice();
+      // tmp[i] = data;
+      // this.values = tmp;
     },
   },
   components: {
@@ -42,13 +44,12 @@ export default {
     section: Object,
   },
   data() {
-    const values = new Array(this.section.questions.length).fill(0);
     return {
-      values: values,
       title: this.section.title,
       subtitle: this.section.subtitle,
       points: this.section.points,
       questions: this.section.questions,
+      values: this.section.values,
     };
   },
   computed: {
