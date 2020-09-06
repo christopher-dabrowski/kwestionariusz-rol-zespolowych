@@ -6,7 +6,10 @@
       Do przydziału:
       <b>{{ remaining }}</b> punktów
     </p>
-    <b-button class="mb-2" variant="primary" @click="reset">Reset</b-button>
+    <b-button class="mb-2" variant="primary" @click="reset">
+      <font-awesome-icon class="mr-1" icon="redo" size="sm" />
+      Reset
+    </b-button>
 
     <Option
       v-for="(question, index) in questions"
