@@ -1,8 +1,5 @@
 <template>
   <div id="app" class="mx-4">
-    <b-button class="mb-3" variant="info" @click="addRandomStuffToFB"
-      >Add random stuff!</b-button
-    >
     <b-card
       title="Kwestionariusz ról zespołowych"
       sub-title="Na użytek pracy licencjackiej"
@@ -20,6 +17,12 @@
         />
         <hr v-if="sections.length - 1 != index" />
       </div>
+
+      <footer>
+        <b-button variant="success" size="lg" @click="saveResults"
+          >Wyślij kwestionariusz</b-button
+        >
+      </footer>
     </b-card>
   </div>
 </template>
@@ -67,19 +70,14 @@ export default {
             }
       );
     },
-    addRandomStuffToFB() {
-      // TODO: Remove me!
-
-      questionnairesCollections
-        .add({
+    async saveResults() {
+      try {
+        await questionnairesCollections.add({
           data: this.sections,
-        })
-        .then((id) => {
-          console.log(id);
-        })
-        .catch((e) => {
-          console.error(e);
         });
+      } catch (error) {
+        console.log(error);
+      }
     },
   },
 };
