@@ -19,9 +19,10 @@
       </div>
 
       <footer>
-        <b-button variant="success" size="lg" @click="saveResults"
-          >Wyślij kwestionariusz</b-button
-        >
+        <b-button variant="success" size="lg" @click="saveResults">
+          <font-awesome-icon class="mr-2" icon="paper-plane" />
+          Wyślij kwestionariusz
+        </b-button>
       </footer>
     </b-card>
   </div>
