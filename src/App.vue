@@ -65,8 +65,7 @@ export default {
 
       questionnairesCollections
         .add({
-          name: "John",
-          points: 10,
+          data: this.sections,
         })
         .then((id) => {
           console.log(id);
