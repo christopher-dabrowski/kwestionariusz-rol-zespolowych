@@ -41,17 +41,21 @@ export default {
     Option,
   },
   props: {
-    section: Object,
+    // section: Object,
+    title: String,
+    subtitle: String,
+    points: Number,
+    questions: Array,
+    values: Array,
   },
-  data() {
-    return {
-      title: this.section.title,
-      subtitle: this.section.subtitle,
-      points: this.section.points,
-      questions: this.section.questions,
-      values: this.section.values,
-    };
-  },
+  // data() {
+  //   return {
+  //     title: this.section.title,
+  //     subtitle: this.section.subtitle,
+  //     points: this.section.points,
+  //     questions: this.section.questions,
+  //   };
+  // },
   computed: {
     remaining() {
       const spent = this.values.reduce((v, x) => v + x, 0);

@@ -12,7 +12,11 @@
     >
       <div v-for="(section, index) in sections" :key="index">
         <Section
-          :section="section"
+          :title="section.title"
+          :subtitle="section.subtitle"
+          :points="section.points"
+          :questions="section.questions"
+          :values="section.values"
           @valueChange="handleSectionValueChange(index, $event)"
         />
         <hr v-if="sections.length - 1 != index" />
@@ -47,8 +51,14 @@ export default {
   computed: {},
   methods: {
     handleSectionValueChange(sectionNumber, { i, data }) {
-      console.log(sectionNumber);
-      console.log(i, data);
+      this.sections = this.sections.map((s, j) => {
+        if (j !== sectionNumber) return s;
+
+        return {
+          ...s,
+          values: s.values.map((v, k) => (k !== i ? v : data)),
+        };
+      });
     },
     addRandomStuffToFB() {
       // TODO: Remove me!
