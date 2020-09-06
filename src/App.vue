@@ -96,4 +96,9 @@ export default {
   margin-top: 60px;
   margin-bottom: 80px;
 }
+
+.card-title {
+  font-size: 35px;
+  font-weight: bolder;
+}
 </style>
