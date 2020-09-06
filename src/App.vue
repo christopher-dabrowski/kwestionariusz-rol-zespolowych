@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+  <div id="app" class="mx-4">
     <b-button class="mb-3" variant="info" @click="addRandomStuffToFB"
       >Add random stuff!</b-button
     >
@@ -47,18 +45,16 @@ export default {
       sections: sections,
     };
   },
-
-  computed: {},
   methods: {
     handleSectionValueChange(sectionNumber, { i, data }) {
-      this.sections = this.sections.map((s, j) => {
-        if (j !== sectionNumber) return s;
-
-        return {
-          ...s,
-          values: s.values.map((v, k) => (k !== i ? v : data)),
-        };
-      });
+      this.sections = this.sections.map((s, si) =>
+        si !== sectionNumber
+          ? s
+          : {
+              ...s,
+              values: s.values.map((v, vi) => (vi !== i ? v : data)),
+            }
+      );
     },
     addRandomStuffToFB() {
       // TODO: Remove me!
