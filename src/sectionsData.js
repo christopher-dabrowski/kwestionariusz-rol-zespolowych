@@ -16,7 +16,7 @@ const sections = [
         title: "Część III",
         subtitle: "Gdy jestem wciągnięty razem z innymi w przygotowanie projektu...",
         points: 10,
-        questions: ['Mam skłonność do wywierania wpływu na ludzi, lecz bez wywierania na nich presji', 'Moja czujność pozwala zapobiegać wielu pomyłkom i błędom', 'Jestem gotów kłaść nacisk na działanie, aby upewnić się, że narada nie jest stratą czasu lub, że prowadzi do utracenia z widoku głównego celu', 'Zwykle można na mnie polegać, że wymyślę coś oryginalnego', 'Zawsze jestem gotów uczynić dobrą sugestię przedmiotem zainteresowania całej grupy', 'Zawsze poszukuję ostatnich nowinek, nowych odkryć i wyników badań na określony temat', 'Mam przekonanie, że moja umiejętność wydawania sądu może pomóc w podjęciu odpowiednich decyzji', 'Moją specjalnością jest zorganizowanie najbardziej znaczącej części pracyMoją specjalnością jest zorganizowanie najbardziej znaczącej części pracy'],
+        questions: ['Mam skłonność do wywierania wpływu na ludzi, lecz bez wywierania na nich presji', 'Moja czujność pozwala zapobiegać wielu pomyłkom i błędom', 'Jestem gotów kłaść nacisk na działanie, aby upewnić się, że narada nie jest stratą czasu lub, że prowadzi do utracenia z widoku głównego celu', 'Zwykle można na mnie polegać, że wymyślę coś oryginalnego', 'Zawsze jestem gotów uczynić dobrą sugestię przedmiotem zainteresowania całej grupy', 'Zawsze poszukuję ostatnich nowinek, nowych odkryć i wyników badań na określony temat', 'Mam przekonanie, że moja umiejętność wydawania sądu może pomóc w podjęciu odpowiednich decyzji', 'Moją specjalnością jest zorganizowanie najbardziej znaczącej części pracy'],
     },
     {
         title: "Część IV",
