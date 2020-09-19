@@ -18,9 +18,11 @@
         <hr v-if="sections.length - 1 != index" />
       </div>
 
+      <hr />
+
       <footer class="d-flex flex-column align-items-center">
         <b-input-group prepend="Twoje imię:">
-          <b-form-input></b-form-input>
+          <b-form-input v-model="name"></b-form-input>
           <b-input-group-append>
             <b-button variant="success" @click="saveResults">
               <font-awesome-icon class="mr-2" icon="paper-plane" />
@@ -53,6 +55,7 @@ export default {
 
     return {
       sections: sections,
+      name: "",
     };
   },
   methods: {
@@ -81,6 +84,7 @@ export default {
         await questionnairesCollections.add({
           data: this.sections,
           date: new Date(),
+          name: this.name,
         });
         this.$bvModal.msgBoxOk("Kwestionariusz został zapisany");
       } catch (error) {
