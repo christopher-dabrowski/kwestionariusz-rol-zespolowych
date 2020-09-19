@@ -18,11 +18,16 @@
         <hr v-if="sections.length - 1 != index" />
       </div>
 
-      <footer>
-        <b-button variant="success" size="lg" @click="saveResults">
-          <font-awesome-icon class="mr-2" icon="paper-plane" />
-          Wyślij kwestionariusz
-        </b-button>
+      <footer class="d-flex flex-column align-items-center">
+        <b-input-group prepend="Twoje imię:">
+          <b-form-input></b-form-input>
+          <b-input-group-append>
+            <b-button variant="success" @click="saveResults">
+              <font-awesome-icon class="mr-2" icon="paper-plane" />
+              Wyślij
+            </b-button>
+          </b-input-group-append>
+        </b-input-group>
       </footer>
     </b-card>
   </div>
